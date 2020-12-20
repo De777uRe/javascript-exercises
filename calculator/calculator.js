@@ -23,11 +23,16 @@ function multiply (numArray) {
 }
 
 function power(base, exponent) {
-	finalVal = base; 
-	for(let i = 1; i < exponent; i++) {
-		finalVal *= base;
+	if(exponent == 0) {
+		return 1;
 	}
-	return finalVal;
+	else {
+		finalVal = base; 
+		for(let i = 1; i < exponent; i++) {
+			finalVal *= base;
+		}
+		return finalVal;
+	}	
 }
 
 function factorial(base) {
